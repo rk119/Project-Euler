@@ -10,3 +10,20 @@ function fiboEvenSum(n) {
   return true;
 }
 ```
+
+### Solution
+
+```javascript
+function fiboEvenSum(n) {
+  let arr = [1, 1];
+  let i = 2;
+  while ((arr[i - 1] + arr[i - 2]) <= n) {
+    arr.push(arr[i - 1] + arr[i - 2])
+    i++
+  }
+  let sum = (arr.filter(num => num % 2 === 0)).reduce((sumVal, currentVal) => {
+    return sumVal + currentVal;
+  });
+  return sum;
+}
+```
