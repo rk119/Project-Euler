@@ -26,4 +26,7 @@ function fiboEvenSum(n) {
   });
   return sum;
 }
+
+fiboEvenSum(10) // returns 10
+fiboEvenSum(4000000) // returns 4613732
 ```
